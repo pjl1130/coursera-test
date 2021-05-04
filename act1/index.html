@@ -4,18 +4,55 @@
 <meta charset="utf-8">
 <script src="angular.min.js"></script>
 <script src="app.js"></script>
-<style></style>
+
+<style>
+body{
+background-image:url("img/bgop2.jpg");
+font-size: 25px;
+font-family: 'Courier New', Courier, monospace;
+}
+
+div {
+background-color:white;
+text-align: center;
+width: 550px;
+border: 15px solid black;
+padding: 70px;
+margin: 20px auto;
+}
+
+ h1{
+text-align: center;
+background-color: #666;
+padding: 30px;
+font-size: 35px;
+color: white;
+}
+ button{
+
+font-size: 25px;
+border-radius: 50%;
+padding: 20px;
+ }
+ 
+</style>
 <title>Expressions and Interpolation</title>
 </head>
 
 <body>
     <h1>Expressions and Interpolation</h1>
     <div ng-controller='MsgController'>
-        Message is <br> {{name}}
+        {{name}} says: arf arf!
+        <br>
+        <br>
         {{sayMsg()}}
-        
-
+        <br>
+        <br>
+        <button ng-click =PetMolly()>Pet Molly</button>
+        <br> 
+        <img ng-src="img/pic_{{states}}.jpg">
     </div>
+
     
 </body>
 
