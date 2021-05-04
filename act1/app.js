@@ -13,7 +13,7 @@ function MsgController($scope) {
   return "Molly likes dog food";
  }
 $scope.PetMolly = function (){
-$scope.states = "petted";
+$scope.states = "pet";
 }
 
   
