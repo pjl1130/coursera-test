@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+   <head>
+      <title>Programming Activity 3</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      <script src = "MainApp.js"></script>
+      <script src = "studentController.js"></script>
+      
+      <style>
+      body {
+      background-color: #87C3FB;
+      font-size: 20px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+
+      }
+         table, th , td {
+            border: 3px solid #425F7A;
+            border-collapse: collapse;
+            padding: 10px;
+         }
+         table tr:nth-child(odd) {
+            background-color: #72A6C7;
+         }
+         table tr:nth-child(even) {
+            background-color: #ffffff;
+         }
+         h1{
+text-align: center;
+background-color: #1D4D7A;
+padding: 30px;
+font-size: 35px;
+color: white;
+}
+         
+      </style>
+   </head>
+   
+   <body>
+      <h1>Programming Activity #3</h1>
+      <div ng-app = "mainApp" ng-controller = "studentController">
+         <br>
+         <br>
+         <table align="center" style ="border-style: double;" >
+            <tr>
+               <td>Enter first name:</td>
+               <td><input type = "text" ng-model = "student1.firstName"></td>
+            </tr>
+            <tr>
+               <td>Enter last name: </td>
+               <td><input type = "text" ng-model = "student1.lastName"></td>
+            </tr>
+            <tr>
+               <td>Your Name is : </td>
+               <td>{{student1.fullName()}}</td>
+            </tr>
+            <tr>
+               <td>Enter Strand: </td>
+               <td><input type = "text" ng-model = "student1.strand"></td>
+            </tr>
+            <tr>
+               <td>Enter School Name: </td>
+               <td><input type = "text" ng-model = "student1.school"></td>
+            </tr>  
+            <tr>
+               <td>Enter Grade/Level: </td>
+               <td><input type = "text" ng-model = "student1.level"></td>
+            </tr>
+            <tr>
+               <td>Your Strand, School and Grade Level are:</td>
+               <td>{{student1.EdInfo()}}</td>
+            </tr>
+
+            <tr style="text-align: center;">
+               <td colspan="2">Grades in Subjects
+               
+                  <table align="center">
+                  <tr>
+                        <th>Name</th>
+                        <th>Marks</th>
+                     </tr>
+                     <tr ng-repeat = "subject in student1.subject">
+                        <td>{{ subject.name }}</td>
+                        <td>{{ subject.marks }}</td>
+                     </tr>
+                  </table>   
+            </td>
+         </tr>
+         <tr >
+            <td colspan="2" style="text-align: center;">Your Grades are:
+            <table align="center">  
+            <tr ng-repeat = "subject in student1.subject">
+                 <td>{{subject.marks}}</td> 
+               </table>
+            </td>
+         </tr>
+         <tr>
+         <td colspan="2" style="text-align: center;">Remarks : Passed</td>
+         </tr>
+         </table>
+         <br>
+         <br>
+
+
+         <br>
+         <br>
+         <table align="center" style ="border-style: double;">
+            <tr>
+               <td>Enter first name:</td>
+               <td><input type = "text" ng-model = "student2.firstName"></td>
+            </tr>
+            <tr>
+               <td>Enter last name: </td>
+               <td><input type = "text" ng-model = "student2.lastName"></td>
+            </tr>
+            <tr>
+               <td>Your Name is : </td>
+               <td>{{student2.fullName()}}</td>
+            </tr>
+            <tr>
+               <td>Enter Strand: </td>
+               <td><input type = "text" ng-model = "student2.strand"></td>
+            </tr>
+            <tr>
+               <td>Enter School Name: </td>
+               <td><input type = "text" ng-model = "student2.school"></td>
+            </tr>  
+            <tr>
+               <td>Enter Grade/Level: </td>
+               <td><input type = "text" ng-model = "student2.level"></td>
+            </tr>
+            <tr>
+               <td>Your Strand, School and Grade Level are:</td>
+               <td>{{student2.EdInfo()}}</td>
+            </tr>
+
+            <tr style="text-align: center;">
+               <td colspan="2">Grades in Subjects
+               
+                  <table align="center">
+                  <tr>
+                        <th>Name</th>
+                        <th>Marks</th>
+                     </tr>
+                     <tr ng-repeat = "subject in student2.subject">
+                        <td>{{ subject.name }}</td>
+                        <td>{{ subject.marks }}</td>
+                     </tr>
+                  </table>   
+            </td>
+         </tr>
+         <tr >
+            <td colspan="2" style="text-align: center;">Your Grades are:
+            <table align="center">  
+            <tr ng-repeat = "subject in student2.subject">
+                 <td>{{subject.marks}}</td> 
+               </table>
+            </td>
+         </tr>
+         <tr>
+         <td colspan="2" style="text-align: center;">Remarks : Passed</td>
+         </tr>
+         </table>
+         <br>
+         <br>
+
+
+         <br>
+         <br>
+         <table align="center" style ="border-style: double;">
+            <tr>
+               <td>Enter first name:</td>
+               <td><input type = "text" ng-model = "student3.firstName"></td>
+            </tr>
+            <tr>
+               <td>Enter last name: </td>
+               <td><input type = "text" ng-model = "student3.lastName"></td>
+            </tr>
+            <tr>
+               <td>Your Name is : </td>
+               <td>{{student3.fullName()}}</td>
+            </tr>
+            <tr>
+               <td>Enter Strand: </td>
+               <td><input type = "text" ng-model = "student3.strand"></td>
+            </tr>
+            <tr>
+               <td>Enter School Name: </td>
+               <td><input type = "text" ng-model = "student3.school"></td>
+            </tr>  
+            <tr>
+               <td>Enter Grade/Level: </td>
+               <td><input type = "text" ng-model = "student3.level"></td>
+            </tr>
+            <tr>
+               <td>Your Strand, School and Grade Level are:</td>
+               <td>{{student3.EdInfo()}}</td>
+            </tr>
+
+            <tr style="text-align: center;">
+               <td colspan="2">Grades in Subjects
+               
+                  <table align="center">
+                  <tr>
+                        <th>Name</th>
+                        <th>Marks</th>
+                     </tr>
+                     <tr ng-repeat = "subject in student3.subject">
+                        <td>{{ subject.name }}</td>
+                        <td>{{ subject.marks }}</td>
+                     </tr>
+                  </table>   
+            </td>
+         </tr>
+         <tr >
+            <td colspan="2" style="text-align: center;">Your Grades are:
+            <table align="center">  
+            <tr ng-repeat = "subject in student3.subject">
+                 <td>{{subject.marks}}</td> 
+               </table>
+            </td>
+         </tr>
+         <tr>
+         <td colspan="2" style="text-align: center;">Remarks : Passed</td>
+         </tr>
+         </table>
+         <br>
+         <br>
+      </div>
+   </body>
+</html>
