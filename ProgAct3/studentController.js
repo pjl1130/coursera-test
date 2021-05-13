@@ -1,15 +1,15 @@
 mainApp.controller("studentController", function($scope) {
     $scope.student1 = {
-       firstName: "Mahesh",
-       lastName: "Parashar",
+       firstName: "Molly",
+       lastName: "Ame",
        strand: "STEM",
-       school:"INFO",
-       level:"GR 12",
+       school:"Informatics College",
+       level:"12",
     
        subject:[
-          {name:'Physics',marks:70},
+          {name:'Physics',marks:80},
           {name:'Chemistry',marks:80},
-          {name:'Math',marks:75},
+          {name:'Math',marks:85},
           {name:'English',marks:90},
           {name:'History',marks:85}
        ],
@@ -31,7 +31,7 @@ mainApp.controller("studentController", function($scope) {
       firstName: "Jack",
       lastName: "Rogers",
       strand: "ABM",
-      school:"San Beda",
+      school:"San Beda Alabang",
       level:"11",
    
       subject:[
@@ -59,7 +59,7 @@ mainApp.controller("studentController", function($scope) {
       firstName: "Koko",
       lastName: "Bop",
       strand: "HUMMS",
-      school:"FEU",
+      school:"FEU Alabang",
       level:"11",
    
       subject:[
